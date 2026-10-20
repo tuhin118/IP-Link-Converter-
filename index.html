@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack DNS Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a0a">
+</head>
+<body>
+    <div class="terminal">
+        <h1>SYSTEM_DNS_SCANNER</h1>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('domainToIp')">DOMAIN TO IP</button>
+            <button class="tab" onclick="switchTab('ipToDomain')">IP TO DOMAIN</button>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="targetInput" placeholder="Enter Target (e.g., google.com)">
+            <button id="scanBtn" onclick="startScan()">[ EXECUTE ]</button>
+        </div>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="hidden">
+            <p id="loadingText">Scanning...</p>
+            <div class="scanline"></div>
+        </div>
+
+        <!-- Result Display -->
+        <div id="resultBox" class="hidden">
+            <p>Target Found:</p>
+            <h2 id="resultText"></h2>
+        </div>
+
+        <div id="errorBox" class="hidden">
+            <p id="errorText"></p>
+        </div>
+
+        <!-- Footer / Details -->
+        <footer>
+            <p>Developed by: <span>Your Name</span></p>
+            <a href="https://tiktok.com/@yourusername" target="_blank">TikTok Profile</a>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
